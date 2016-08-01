@@ -11,4 +11,17 @@ function findLongestWord(str) {
   return longestStr;
 }
 
+//Another solution
+
+function findLongestWord(str) {
+  str = str.split(" ");
+  str = str.sort(function(shortest, longest){
+    return shortest.length - longest.length;
+  });
+
+   return str[str.length - 1].length;
+}
+
+
 //findLongestWord("The quick brown fox jumped over the lazy dog");
+findLongestWord("What is the average airspeed velocity of an unladen swallow");

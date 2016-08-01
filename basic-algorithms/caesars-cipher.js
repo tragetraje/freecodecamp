@@ -14,7 +14,6 @@ function rot13(str) { // LBH QVQ VG!
         }
         unicodeArray[j] = String.fromCharCode(unicodeArray[j]);
     }
-
     return unicodeArray.join('');
 }
 
