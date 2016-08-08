@@ -57,7 +57,7 @@ var quotes = [{
     author: "Henry Ford",
     attrib: "https://99designs.com.au"
 }, {
-    quote: "Practice safe design: Use a concept.",
+    quote: "Practice safe design: use a concept.",
     author: "Petrula Vrontikis",
     attrib: "https://99designs.com.au"
 }, {
@@ -109,13 +109,31 @@ var quotes = [{
 //Function to randomly generate a quote and append it on the page
 function getQuote() {
     var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    $('.quote').text(randomQuote.quote);
-    $('.author').text(randomQuote.author);
+    var quoteId = document.getElementById("quote");
+    var authorId = document.getElementById("author");
+    quoteId.textContent = randomQuote.quote;
+    authorId.textContent = '-' + randomQuote.author;
+    said = randomQuote.quote.split(' ').join('%20');
+		speaker = randomQuote.author.split(' ').join('%20');
 }
 
-//An event listener which fires getQuote() function when clicking the button
-$(document).ready(function() {
-    $('.btn-getquote').on('click', function() {
-        getQuote();
-    });
+//Randomly change the color on the page, used randomColor.js external script //https://randomcolor.llllll.li/
+function changeColor() {
+  var page = document.body;
+  page.style.backgroundColor = randomColor({
+    luminosity: 'dark'
+  });
+}
+
+//On click event to get a new random quote and change the background
+var inspireBtn = document.getElementById("btn-isnpire");
+inspireBtn.addEventListener("click", function(){
+  getQuote();
+  changeColor();
 });
+
+var tweetBtn = document.getElementById("twitter");
+
+//tweetBtn.addEventListener("click", function(){
+  tweetBtn.setAttribute('href', 'https://twitter.com/intent/tweet?text=' + said + '%20said,%20"' + speaker + '"%20%23Quote%20http://goo.gl/hIlpwV');
+//});
