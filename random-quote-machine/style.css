@@ -1,0 +1,35 @@
+body {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+#main {
+    width: 450px;
+    text-align: left;
+    margin-top: 100px;
+    position: relative;
+    margin: 8% auto auto auto;
+    width: 450px;
+    padding: 40px 50px;
+}
+#quote {
+    font-size: 30px;
+}
+#author {
+    font-size: 20px;
+    text-align: right;
+}
+a, a:focus, a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.btn, .btn:hover, .btn:focus, .btn:active:focus, .btn.active:focus {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: black;
+    border: 2px solid #fff;
+    text-shadow: none;
+    font-weight: bold;
+    outline: none;
+    margin-right: 10px;
+}

@@ -97,7 +97,7 @@ var quotes = [{
     author: "David Ogilvy",
     attrib: "https://99designs.com.au"
 }, {
-    quote: "I don't need an alarm clock. My ideas wake me",
+    quote: "I don't need an alarm clock. My ideas wake me.",
     author: "Ray Bradbury",
     attrib: "https://designschool.canva.com"
 }, {
@@ -113,8 +113,6 @@ function getQuote() {
     var authorId = document.getElementById("author");
     quoteId.textContent = randomQuote.quote;
     authorId.textContent = '-' + randomQuote.author;
-    said = randomQuote.quote.split(' ').join('%20');
-		speaker = randomQuote.author.split(' ').join('%20');
 }
 
 //Randomly change the color on the page, used randomColor.js external script //https://randomcolor.llllll.li/
@@ -131,9 +129,3 @@ inspireBtn.addEventListener("click", function(){
   getQuote();
   changeColor();
 });
-
-var tweetBtn = document.getElementById("twitter");
-
-//tweetBtn.addEventListener("click", function(){
-  tweetBtn.setAttribute('href', 'https://twitter.com/intent/tweet?text=' + said + '%20said,%20"' + speaker + '"%20%23Quote%20http://goo.gl/hIlpwV');
-//});
