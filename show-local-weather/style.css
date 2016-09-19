@@ -1,0 +1,121 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    text-align: center;
+}
+.bg-default {
+    background: url("https://c2.staticflickr.com/8/7551/29669865561_7a16d5700c_z.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-rain {
+    background: url("https://c2.staticflickr.com/9/8001/29669866841_d3ee522ca6_z.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-snow {
+    background: url("https://c8.staticflickr.com/9/8549/29669867631_c9699bf4d8_z.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-clouds {
+    background: url("https://c4.staticflickr.com/9/8078/29669865051_2d5e44710a_z.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-clear {
+    background: url("https://c2.staticflickr.com/9/8762/29669864721_9ddcfee352_z.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-extreme {
+    background: url("https://c8.staticflickr.com/9/8638/29669865871_90ba9ba3a6_z.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.btn-celsius, .btn-fahrenheit {
+    display: none;
+}
+.btn-default .btn-default:hover, .btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+.information {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 26px;
+    font-weight: 600;
+}
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.inner {
+    padding: 30px;
+}
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+@media (min-width: 300px) {
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    .cover-container {
+        width: 100%;
+    }
+    .information {
+        font-size: 22px;
+    }
+}
+@media (min-width: 768px) {
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    .cover-container {
+        width: 100%;
+    }
+    .information {
+        font-size: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .cover-container {
+        width: 700px;
+    }
+    .information {
+        font-size: 40px;
+    }
+}

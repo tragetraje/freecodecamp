@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>Show Local Weather</title>
+    <title>Weather Teller</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="container">
-      <p>Hi there!</p>
-    </div>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="jquery.min.js"></script>
-  </body>
+</head>
+
+<body class="bg-default">
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="cover-container">
+                    <p class="information"></p>
+                    <button type="button" class="btn btn-default btn-lg btn-weather"><strong>Check Weather</strong></button>
+                    <button type="button" class="btn btn-default btn-lg btn-celsius"><strong>Convert to &#8451</strong></button>
+                    <button type="button" class="btn btn-default btn-lg btn-fahrenheit"><strong>Convert to &#8457</strong></button>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
