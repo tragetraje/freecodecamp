@@ -16,6 +16,7 @@ $( document ).ready(function() {
         $.getJSON(urlWeatherApi, function(forecast) {
             var condition = forecast.weather[0].main;
             var celsius = forecast.main.temp;
+            var fahrenheit = (celsius * 9/5) + 32;
             var weather = '';
             var bkgImg = '';
             //console.log(forecast.weather[0].main);
@@ -46,10 +47,6 @@ $( document ).ready(function() {
                     bkgImg = 'bg-default';
             }
 
-            function convertTo(celsius) {
-                var fahrenheit = '';
-                return fahrenheit = Math.round((celsius * 9 / 5) + 32);
-            }
             $('.information').text('Hello ' + city + '!');
             $('.btn-weather').click(function() {
                 $('body').removeClass('bg-default').addClass(bkgImg);
@@ -68,7 +65,7 @@ $( document ).ready(function() {
             $('.btn-fahrenheit').click(function() {
                 $('.btn-fahrenheit').hide();
                 $('.btn-celsius').show();
-                $('.information').text("It's " + convertTo(celsius) + "°F in " + city + ". ")
+                $('.information').text("It's " + Math.round(fahrenheit) + "°F in " + city + ". ")
                     .append(weather);
             });
         });
