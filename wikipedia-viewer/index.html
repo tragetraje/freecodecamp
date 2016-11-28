@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="wiki-viewer" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wikipedia Viewer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div ng-controller="WikiController as wiki"
+<form action="">
+<input id="search-input" ng-model="input.term" type="text" placeholder="Search Wikipedia" required autofocus>
+<input id="searchWiki" ng-click="searchWiki()" type="submit" value="Search">
+<input id="searchWikiRandom" type="submit" value="Show Random">
+</form>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.1/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
